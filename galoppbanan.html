@@ -44,7 +44,7 @@ function Racehorse(number) {
     
     function moveHorses() {
         allHorses.forEach(function(horse) {
-            let slump = holes[(Math.random() * 17) | 0];
+            let slump = holes[(Math.random() * holes.length) | 0];
                         horse.position += slump;
         })
     }
