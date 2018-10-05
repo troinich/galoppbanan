@@ -15,7 +15,7 @@ const distance = 20;
     function createHorses(num) {
         var horses = [];
         for (let i = 0; i < num; i++) {
-            var horse = new Racehorse (i+1);
+            var horse = new Racehorse(i+1);
             horses.push(horse);
         }
         return horses;
@@ -40,7 +40,7 @@ function Racehorse(number) {
     })
     }  */
     
-   var holes = [3, 3, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0];
+   var holes = [3, 3, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0];
     
     function moveHorses() {
         allHorses.forEach(function(horse) {
@@ -50,6 +50,8 @@ function Racehorse(number) {
     }
 
 
+        
+    
     // контролює, чи хтось виграв
 while (leaderPosition < distance) {
     // Rulla bollarna i hål
@@ -76,5 +78,20 @@ allHorses.forEach(function(horse){
     console.log(allHorses);
     
     console.log("The winner is Horse number " + allHorses[0].number);
+    
+   
+   
+    var possibleWinner = 2;
+    
+    function willWin() {
+        if (possibleWinner == allHorses[0].number) {
+            console.log("LUCKY YOU!");
+        } else {
+            console.log("Try next time");
+        }
+    }
+        
+        willWin();
+        
 </script>
 </html>
